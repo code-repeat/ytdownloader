@@ -10,12 +10,12 @@ print(Fore.RED, show)
 #   Impede que o usuário deixe o campo de url vazio
 url = ''
 while url == '':
-    url = input('>>> URL: ')
+    url = str(input('>>> URL: ')).strip()
 
 #   Verifica se a url é válida
 while url[:24] != 'https://www.youtube.com/':
     print('url inválida!')
-    url = input('>>> URL: ')
+    url = str(input('>>> URL: ')).strip()
 
 #  Fatia a string para adcionar o 'ss'
 url_slice1 = url[:12]
